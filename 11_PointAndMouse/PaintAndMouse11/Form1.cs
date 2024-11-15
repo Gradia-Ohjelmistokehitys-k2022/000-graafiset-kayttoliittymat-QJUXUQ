@@ -19,7 +19,7 @@ namespace PaintAndMouse11
 
             this.KeyDown += Form1_KeyDown;
             this.KeyUp += Form1_KeyUp;
-            this.ActiveControl = null;
+            
         }
 
         Point piste = new Point(0, 0);
