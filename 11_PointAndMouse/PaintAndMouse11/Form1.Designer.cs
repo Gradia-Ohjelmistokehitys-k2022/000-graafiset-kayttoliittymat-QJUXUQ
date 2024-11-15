@@ -49,6 +49,7 @@
             this.textBoxX.Name = "textBoxX";
             this.textBoxX.Size = new System.Drawing.Size(33, 20);
             this.textBoxX.TabIndex = 1;
+            this.textBoxX.TabStop = false;
             // 
             // textBoxY
             // 
@@ -56,6 +57,7 @@
             this.textBoxY.Name = "textBoxY";
             this.textBoxY.Size = new System.Drawing.Size(33, 20);
             this.textBoxY.TabIndex = 2;
+            this.textBoxY.TabStop = false;
             // 
             // Form1
             // 
@@ -65,9 +67,12 @@
             this.Controls.Add(this.textBoxY);
             this.Controls.Add(this.textBoxX);
             this.Controls.Add(this.piirraButton);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);

@@ -16,6 +16,10 @@ namespace PaintAndMouse11
         public Form1()
         {
             InitializeComponent();
+
+            this.KeyDown += Form1_KeyDown;
+            this.KeyUp += Form1_KeyUp;
+            this.ActiveControl = null;
         }
 
         Point piste = new Point(0, 0);
@@ -126,6 +130,31 @@ namespace PaintAndMouse11
             {
                 dragging=false;
             }
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.A) 
+            {
+                piste.X -= 1;
+
+            }else if (e.KeyCode == Keys.D) 
+            {
+                piste.X += 1;
+
+            }else if(e.KeyCode == Keys.W) 
+            {
+                piste.Y -= 1;
+
+            }else if(e.KeyCode == Keys.S) 
+            {
+                piste.Y += 1;
+            }
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            Invalidate();
         }
     }
 
